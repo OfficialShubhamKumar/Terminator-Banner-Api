@@ -173,11 +173,11 @@ def process_banner_image(data, avatar_bytes, banner_bytes, pin_bytes):
 @app.get("/")
 async def home():
     return {"message": "⚡ Ultra Fast Banner API Running",
-           "Fix By": "TSun-FreeFire",
-           "Telegram": "@saeedxdie",
+           "Fix By": "Terminator",
+           "Telegram": "OfficialShubhamKumar",
            "Your Info Api": INFO_API_URL,
            "Api Endpoint": "/profile?uid={uid}",
-           "Note": "Join To @Flexbasei For More 💝"
+           "Note": "Join To @terminatorhere For More 💝"
     }
 
 @app.get("/profile")

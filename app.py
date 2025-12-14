@@ -162,7 +162,7 @@ def process_banner_image(data, avatar_bytes, banner_bytes, pin_bytes):
     box_x = final_w - (text_w + px * 2)
     box_y = final_h - (text_h + py * 2)
     
-    draw.rectangle([box_x, box_y, final_w, final_h], fill="black")
+    draw.text((box_x + px, box_y + py - 6), level_txt, font=font_level, fill="white")
     draw.text((box_x + px, box_y + py - 6), level_txt, font=font_level, fill="white")
 
     img_io = io.BytesIO()

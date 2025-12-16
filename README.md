@@ -1,0 +1,1 @@
+Banner API by Terminator

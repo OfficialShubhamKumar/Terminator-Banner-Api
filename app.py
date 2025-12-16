@@ -185,7 +185,7 @@ async def home():
     return {
         "status": "Banner API Running",
         "endpoint": "/profile?uid=UID",
-        "credit": "This Banner API Developed & Managed by OfficialShubhamKumar • Terminator API"
+        "credit": "This Banner API Developed & Managed by @OfficialShubhamKumar • Terminator API"
     }
 
 @app.get("/profile")

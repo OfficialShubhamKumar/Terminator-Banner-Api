@@ -180,13 +180,59 @@ def process_banner_image(data, avatar_bytes, banner_bytes, pin_bytes):
     return out
 
 # ================= ROUTES =================
-@app.get("/")
+@app.get("/", response_class=HTMLResponse)
 async def home():
-    return {
-        "status": "Banner API Running",
-        "endpoint": "/profile?uid=UID",
-        "credit": "This Banner API Developed & Managed by OfficialShubhamKumar • Terminator API"
-    }
+    return """
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Terminator Banner API</title>
+    <style>
+        body {
+            margin: 0;
+            background: #0b0b0b;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .box {
+            padding: 50px 60px;
+            border-radius: 14px;
+            background: #111;
+            border: 2px solid #222;
+        }
+        h1 {
+            font-size: 44px;
+            margin-bottom: 25px;
+        }
+        .endpoint {
+            font-size: 26px;
+            color: #00e5ff;
+            margin-top: 10px;
+        }
+        .credit {
+            margin-top: 30px;
+            font-size: 24px;
+            color: #ffcc66;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>🚀 Terminator Banner API</h1>
+        <div class="endpoint">/profile?uid=UID</div>
+        <div class="credit">
+            This Banner API Developed & Managed by<br>
+            <b>@OfficialShubhamKumar • Terminator API</b>
+        </div>
+    </div>
+</body>
+</html>
+"""
 
 @app.get("/profile")
 async def get_banner(uid: str):
